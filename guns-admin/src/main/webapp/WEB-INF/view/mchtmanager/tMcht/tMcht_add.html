@@ -1,0 +1,41 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="mchtno" name="银商商户号" underline="true"/>
+                            <#input id="mchtname" name="商户名称" underline="true"/>
+                            <#input id="briefname" name="商户简称" underline="true"/>
+                            <#input id="state" name="商户状态" underline="true"/>
+                            <#input id="signType" name="签名类型" underline="true"/>
+                            <#input id="publicKey" name="公钥" underline="true"/>
+                            <#input id="privateKey" name="私钥，预留字段"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="md5key" name="MD5校验值" underline="true"/>
+                            <#input id="refundFlag" name="是否允许隔日退货" underline="true"/>
+                            <!--<#input id="createTime" name="创建时间" underline="true"/>-->
+                            <!--<#input id="refreshTime" name="更新时间" underline="true"/>-->
+                            <#input id="categoryid" name="商户类别，详见类目表" underline="true"/>
+                            <#input id="mallCode" name="所属综合体,取值为T_MALL的CODE" underline="true"/>
+                            <#input id="note" name="备注" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TMchtInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TMchtInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/mchtmanager/tMcht/tMcht_info.js"></script>
+@}
